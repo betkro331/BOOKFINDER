@@ -24,6 +24,7 @@
   },
   "type": "module",
   "devDependencies": {
+    "@faker-js/faker": "^7.6.0",
     "nodemon": "^2.0.22"
   }
 }

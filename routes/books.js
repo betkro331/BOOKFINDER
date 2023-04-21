@@ -17,8 +17,8 @@ const bookSchema = new Schema({
 })
 
 // Create collection MODEL
-mongoose.model('books', bookSchema)
-// const bookModel = mongoose.model('books', bookSchema)
+// mongoose.model('books', bookSchema)
+export const bookModel = mongoose.model('books', bookSchema)
 
 
 // --- ROUTES ---
