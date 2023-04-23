@@ -28,8 +28,10 @@ booksRouter.post('/', async (req, res) => {
   // const book = new bookModel(req.body);
   const book = new mongoose.models.books()
   book.title = req.body.title
-  book.author = req.body.author
-  book.pages = req.body.pages
+  book.author = req.body.author,
+  book.pages = req.body.pages,
+  book.publishedDate = req.body.publishedDate
+
   try {
     const newbook = await book.save()
     // Response code 201 indicates successful creation of a resource.
@@ -40,22 +42,34 @@ booksRouter.post('/', async (req, res) => {
   }
 })
 
-// GET all books
+// GET all books or by filter/search
 booksRouter.get('/', async (req, res) => {
   try {
-    const books = await mongoose.models.books.find()
-    // const books = await bookModel.find()
-    res.json(books)
+    const filter = {};
+    if (req.query.title) {
+      filter.title = req.query.title;
+    }
+    if (req.query.author) {
+      filter.author = req.query.author;
+    }
+    if (req.query.genre) {
+      filter.genre = req.query.genre;
+    }
+    // Add more if statements for other filters as needed
+    
+    const limit = parseInt(req.query.limit) || 0;
+    const books = await mongoose.models.books.find(filter).limit(limit);
+    res.json(books);
   } catch (err) {
-    // Response code 500 indicates 'server error'.
-    res.status(500).json({ message: err.message })
+    res.status(500).json({ message: err.message });
   }
-})
+});
+
 
 // GET one book by ID
 booksRouter.get('/:id', async (req, res) => {
   try {
-    const books = await mongoose.models.books.findById(request.params.id)
+    const books = await mongoose.models.books.findById(req.params.id)
     // const books = await bookModel.findById(request.params.id)
     res.json(books)
   } catch (err) {
@@ -63,6 +77,7 @@ booksRouter.get('/:id', async (req, res) => {
     res.status(500).json({ message: err.message })
   }
 })
+
 
 // UPDATE a book by ID
 booksRouter.put('/:id', async (req, res) => {

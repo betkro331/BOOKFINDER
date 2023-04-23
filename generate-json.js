@@ -10,6 +10,7 @@ async function run(){
 }
 run()
 
+// Function to generate new books 
 async function generateBooks(clear = true) {
   if(!clear){
     books = JSON.parse(fs.readFileSync('./json/books.json'))
