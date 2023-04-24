@@ -30,14 +30,16 @@ booksRouter.post('/', async (req, res) => {
   book.title = req.body.title
   book.author = req.body.author,
   book.pages = req.body.pages,
-  book.publishedDate = req.body.publishedDate
+  book.publishedDate = req.body.publishedDate,
+  book.summary = req.body.summary,
+  book.rating = req.body.rating
 
   try {
     const newbook = await book.save()
     // Response code 201 indicates successful creation of a resource.
     res.status(201).json(newbook)
   } catch (err) {
-    // Response code 400 indicates that the server was unable to process the request due to invalid information sent by the client.
+    // Response code 400 indicates invalid information sent by the client.
     res.status(400).json({ message: err.message})
   }
 })
@@ -60,8 +62,15 @@ booksRouter.get('/', async (req, res) => {
     const limit = parseInt(req.query.limit) || 0;
     const books = await mongoose.models.books.find(filter).limit(limit);
     res.json(books);
+
   } catch (err) {
-    res.status(500).json({ message: err.message });
+    if (err.req !== req.query.title || req.query.author || req.query.genre) {
+      // Response code 400 indicates a "Bad Request" error.
+      res.status(400).json({ message: 'Invalid request' });
+    } else {
+      // Response code 500 indicates a server error.
+      res.status(500).json({ message: err.message });
+    }
   }
 });
 
@@ -73,7 +82,6 @@ booksRouter.get('/:id', async (req, res) => {
     // const books = await bookModel.findById(request.params.id)
     res.json(books)
   } catch (err) {
-    // Response code 500 indicates server error, preventing it from fulfilling the request.
     res.status(500).json({ message: err.message })
   }
 })
@@ -84,14 +92,19 @@ booksRouter.put('/:id', async (req, res) => {
   try {
     const updateBook = await mongoose.models.books.findByIdAndUpdate(req.params.id, req.body, { new: true })
     if (!updateBook) {
-      // Response code 404 indicates 'Book not found'.
-      res.status(404).json({ message: err.message })
+      res.status(404).json({ message: "Book not found" })
     } else {
-      res.status(200).json(updateBook)
+      if (req.body.author != null) {
+        updateBook.author = req.body.author;
+      }
+      if (req.body.genre != null) {
+        updateBook.genre = req.body.genre;
+      }
+      await updateBook.save();
+      res.status(200).json(updateBook);
     }
   } catch (err) {
-    // Response code 500 indicates 'Server error'.
-    res.status(500).json({ message: err.message })
+    res.status(500).json({ message: "Server error" });
   }
 });
 
