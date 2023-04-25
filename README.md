@@ -17,11 +17,11 @@ Bifogat detta Github-repo finns word-filen 'BookFinder API documentation' som ä
 ### Testning:
 Manuella och automatiska tester har gjorts och organiserats i Postman Collecction
 Länk till Postman Collection:
-GLÖM EJ LÄNKA!!!
+#### GLÖM EJ LÄNKA!!!
 
 ### Testrapport
 Bifogat detta Github-repo finns word-filen 'Testbeskrivningsrapport'
-GLÖM EJ BIFOGA!!
+#### GLÖM EJ BIFOGA!!
 
 ### Testdata
 Mockad data från faker.js
