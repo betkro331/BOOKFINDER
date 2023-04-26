@@ -21,7 +21,7 @@ URI-länk: mongodb+srv://bettinakronbk:uuTQkIjIhqHBF3Ms@bookfinder.dxfmw9w.mongo
 Bifogat detta Github-repo finns word-filen 'BookFinder API documentation' som är en dokumentation av API:et på engelska
 
 ### Testning:
-Manuella och automatiska tester har gjorts och organiserats i Postman Collecction
+Manuella och automatiska tester har gjorts och organiserats i Postman Collecction \
 Länk till Postman Collection: #### GLÖM EJ LÄNKA!!!
 
 
