@@ -26,7 +26,7 @@ Länk till Postman Collection: #### GLÖM EJ LÄNKA!!!
 
 
 ### Testrapport
-Bifogat detta Github-repo finns word-filen 'Testbeskrivningsrapport' #### GLÖM EJ BIFOGA!!
+Bifogat detta Github-repo finns word-filen 'Testrapport Bettina Kron'
 
 
 ### Testdata
