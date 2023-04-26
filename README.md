@@ -6,9 +6,9 @@ samt ger information om böcker och betyg.
 
 ### Filer
 I Projektet finns bland annat: \
-api.js (som startar upp projektet)
-generate-data.js (som genererar data från fakers.js)
-generate-json.js (som genererar böcker)
+api.js (som startar upp projektet) \
+generate-data.js (som genererar data från fakers.js) \
+generate-json.js (som genererar böcker)\
 books.js (som innehåller schema, modell och CRUD-routes)
 
 ### Installation: 
