@@ -18,8 +18,7 @@ Terminalen startas upp med kommandot: npm run dev
 URI-länk: mongodb+srv://bettinakronbk:uuTQkIjIhqHBF3Ms@bookfinder.dxfmw9w.mongodb.net/test
 
 ### API-dokumentation:
-Bifogat detta Github-repo finns word-filen 'BookFinder API documentation' som är en dokumentation av API:et på engelska \
-### GLÖM EJ BIFOGA
+Bifogat detta Github-repo finns word-filen 'BookFinder API documentation' som är en dokumentation av API:et på engelska ### GLÖM EJ BIFOGA
 
 ### Testning:
 Manuella och automatiska tester har gjorts och organiserats i Postman Collecction \
