@@ -5,7 +5,7 @@ Jag har valt projektet BookFinder, ett API som söker efter böcker utifrån kri
 samt ger information om böcker och betyg.
 
 ### Filer
-I Projektet finns bland annat: 
+I Projektet finns bland annat: \
 api.js (som startar upp projektet)
 generate-data.js (som genererar data från fakers.js)
 generate-json.js (som genererar böcker)
