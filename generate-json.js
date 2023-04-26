@@ -24,7 +24,7 @@ async function generateBooks(clear = true) {
     book.publishedDate = faker.date.past()
     book.summary = faker.lorem.paragraph(),
     book.rating = faker.datatype.number({ min: 1, max: 5 })
-    
+    // Add it to the list
     books.push(book);
     }
     console.log(books);

@@ -53,4 +53,3 @@ async function generateBooks(True) {
   }
 }
 
-// BOOK STORES/RESELLERS

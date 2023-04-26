@@ -30,6 +30,7 @@ booksRouter.post('/', async (req, res) => {
   book.title = req.body.title
   book.author = req.body.author,
   book.pages = req.body.pages,
+  book.genre = req.body.genre,
   book.publishedDate = req.body.publishedDate,
   book.summary = req.body.summary,
   book.rating = req.body.rating
@@ -48,23 +49,49 @@ booksRouter.post('/', async (req, res) => {
 booksRouter.get('/', async (req, res) => {
   try {
     const filter = {};
+
     if (req.query.title) {
       filter.title = req.query.title;
+      const books = await mongoose.models.books.find(filter)
+      res.json(books);
     }
-    if (req.query.author) {
+    else if (req.query.author) {
       filter.author = req.query.author;
+      const books = await mongoose.models.books.find(filter)
+      res.json(books);
     }
-    if (req.query.genre) {
+    else if (req.query.genre) {
       filter.genre = req.query.genre;
+      const books = await mongoose.models.books.find(filter)
+      res.json(books);
     }
-    // Add more if statements for other filters as needed
-    
-    const limit = parseInt(req.query.limit) || 0;
-    const books = await mongoose.models.books.find(filter).limit(limit);
-    res.json(books);
+    else if (req.query.rating) {
+      filter.rating = req.query.rating;
+      const books = await mongoose.models.books.find(filter)
+      res.json(books);
+    }
+    else if (req.query.limit) {
+      const limit = parseInt(req.query.limit) || 0;
+      const books = await mongoose.models.books.find(filter).limit(limit);
+      res.json(books);
+    }
+    else if (req.query.sort) {
+      // To sort by published date
+      const sortField = req.query.sort || 'publishedDate';
+      // To sort in ascending or descending order
+      const sortOrder = (req.query.order === 'desc') ? -1 : 1;
+      const books = await mongoose.models.books.find(filter).sort({ [sortField]: sortOrder });
+      res.json(books);
 
+    } else if (req.query) {
+      const books = await mongoose.models.books.find()
+      res.json(books); 
+    }
+    else {
+      throw 400;  
+    } 
   } catch (err) {
-    if (err.req !== req.query.title || req.query.author || req.query.genre) {
+    if (err === 400){
       // Response code 400 indicates a "Bad Request" error.
       res.status(400).json({ message: 'Invalid request' });
     } else {
@@ -73,7 +100,6 @@ booksRouter.get('/', async (req, res) => {
     }
   }
 });
-
 
 // GET one book by ID
 booksRouter.get('/:id', async (req, res) => {
