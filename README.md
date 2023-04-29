@@ -26,10 +26,11 @@ Dokumentationen är word-filen 'BookFinder API documentation' och finns bifogat 
 ### GLÖM EJ BIFOGA
 
 ### Postman: collections, tester och mock server:
-Projektet har använt https://www.postman.com för att genomföra manuella och automatiska tester.\
-Datat är organiserat i två Postman Collecctions: \
-1. BOOKFINDER med innehållande tester
-2. BOOKFINDER MOCKED med tillhörande Mock Server: Bookfinder MS.
+Projektet har använt https://www.postman.com för att genomföra manuella och automatiska tester.
+Datat är organiserat i två Postman Collecctions: 
+1. BOOKFINDER med innehållande tester. Länk till collection:
+2. BOOKFINDER MOCKED (med tillhörande Mock Server). Länk till collection: 
+3. Bookfinder MS (Mock Servern). Länk till Environment/Mock server:
 Länk till Postman Collection: #### GLÖM EJ LÄNKA!!!
 
 ### Testrapport
