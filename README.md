@@ -20,7 +20,7 @@ Projektet använder MongoDB Atlas, som är en molntjänst för MongoDB-databaser
 MongoDB Compass är grafiskt användargränssnitt (GUI) för att hantera MongoDB-databaser och måste vara installerat på din dator för att kunna arbeta med MongoDB-databaser. Kopplingen mellan applikationen och databasen mongoDB sker via min privata URI-länk:\ 
 mongodb+srv://bettinakronbk:uuTQkIjIhqHBF3Ms@bookfinder.dxfmw9w.mongodb.net/test
 
-### API-dokumentation:
+### API-dokumentation
 Projektet har en tillhörande API-dokumentation som bland annat beskriver API:t, dess fördelar, struktur och funktion.
 Dokumentationen är word-filen 'BookFinder API documentation' och finns bifogat i detta Github-repo.
 
