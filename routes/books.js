@@ -75,6 +75,15 @@ booksRouter.get('/', async (req, res) => {
       const books = await mongoose.models.books.find(filter).limit(limit);
       res.json(books);
     }
+    // Pagination
+    else if (req.query.page) {
+      const page_size = 5
+      const page = parseInt(req.query.limit) || 1;
+      const skip = (page - 1) * page_size;
+      const books = await mongoose.models.books.find(filter).skip(skip).limit(limit);
+      res.json(books);
+    }
+    // Sort on publishedDate
     else if (req.query.sort) {
       // To sort by published date
       const sortField = req.query.sort || 'publishedDate';
@@ -83,6 +92,7 @@ booksRouter.get('/', async (req, res) => {
       const books = await mongoose.models.books.find(filter).sort({ [sortField]: sortOrder });
       res.json(books);
 
+    // No filter
     } else if (req.query) {
       const books = await mongoose.models.books.find()
       res.json(books); 
@@ -111,7 +121,6 @@ booksRouter.get('/:id', async (req, res) => {
     res.status(500).json({ message: err.message })
   }
 })
-
 
 // UPDATE a book by ID
 booksRouter.put('/:id', async (req, res) => {
@@ -147,6 +156,5 @@ booksRouter.delete('/:id', async (req, res) => {
     res.status(500).json[{ message: "Error 500: Server error"}]
   }
 })
-
 
 export default booksRouter
