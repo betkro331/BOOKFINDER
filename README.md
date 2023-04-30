@@ -36,7 +36,7 @@ Länk till Postman Collection: #### GLÖM EJ LÄNKA!!!
 Bifogat detta Github-repo finns word-filen 'Testrapport Bettina Kron'
 
 ### Exempeldata:
-Exempeldata i API-servern är hämtad från faker.js.
+Exempeldata i API-servern är hämtad från faker.js.\
 Exempeldata i Mockservern är hämtad från chatGPT.
 
 ### Projektet är gjort av:
