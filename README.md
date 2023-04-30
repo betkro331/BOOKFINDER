@@ -21,9 +21,8 @@ MongoDB Compass är grafiskt användargränssnitt (GUI) för att hantera MongoDB
 mongodb+srv://bettinakronbk:uuTQkIjIhqHBF3Ms@bookfinder.dxfmw9w.mongodb.net/test
 
 ### API-dokumentation:
-Projektet har en tillhörande API-dokumentation som bland annat beskriver API:t, dess fördelar, struktur och funktion.\ 
+Projektet har en tillhörande API-dokumentation som bland annat beskriver API:t, dess fördelar, struktur och funktion.
 Dokumentationen är word-filen 'BookFinder API documentation' och finns bifogat i detta Github-repo.
-### GLÖM EJ BIFOGA
 
 ### Postman: collections, tester och mock server:
 Projektet har använt https://www.postman.com för att genomföra manuella och automatiska tester.
