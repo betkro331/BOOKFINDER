@@ -17,7 +17,7 @@ Kommandot som startar upp projektet är: npm run dev
 
 ### Databasen bookfinder med MongoDB-cloud som host:
 Projektet använder MongoDB Atlas, som är en molntjänst för MongoDB-databaser. Databasens namn är: 'bookfinder'
-MongoDB Compass är grafiskt användargränssnitt (GUI) för att hantera MongoDB-databaser och måste vara installerat på din dator för att kunna arbeta med MongoDB-databaser. Kopplingen mellan applikationen och databasen mongoDB sker via min privata URI-länk:\ 
+MongoDB Compass är grafiskt användargränssnitt (GUI) för att hantera MongoDB-databaser och måste vara installerat på din dator för att kunna arbeta med MongoDB-databaser. Kopplingen mellan applikationen och databasen mongoDB sker via min privata URI-länk:
 mongodb+srv://bettinakronbk:uuTQkIjIhqHBF3Ms@bookfinder.dxfmw9w.mongodb.net/test
 
 ### API-dokumentation:
@@ -39,5 +39,6 @@ Bifogat detta Github-repo finns word-filen 'Testrapport Bettina Kron'
 Exempeldata i API-servern är hämtad från faker.js.
 Exempeldata i Mockservern är hämtad från chatGPT.
 
-### Av Bettina Kron
+### Projektet är gjort av:
+Bettina Kron, PVT22 (2023-04-30)
 
