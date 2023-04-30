@@ -4,7 +4,7 @@
 Detta Github-repo innehåller projektet BookFinder, ett API som söker efter böcker utifrån kriterier som titel, författare, genre och utgivningsdatum 
 samt ger information om böcker och betyg.
 
-### Projektets filer
+### Projektets filer:
 I Projektet finns bland annat: \
 api.js (som startar upp projektet) \
 generate-data.js (som genererar data från fakers.js) \
@@ -15,12 +15,12 @@ books.js (som innehåller schema, modell och CRUD-routes)
 Projektet startas upp genom att köra Node.js-scriptet i terminalen via t ex VS Code eller Atom.\
 Kommandot som startar upp projektet i terminalen är: npm run dev
 
-### Databasen bookfinder med MongoDB-cloud som host
+### Databasen bookfinder med MongoDB-cloud som host:
 Projektet använder MongoDB Atlas, som är en molntjänst för MongoDB-databaser. Databasens namn är: 'bookfinder'
 MongoDB Compass är grafiskt användargränssnitt (GUI) för att hantera MongoDB-databaser och måste vara installerat på din dator för att kunna arbeta med MongoDB-databaser. Kopplingen mellan applikationen och databasen mongoDB sker via min privata URI-länk:\ 
 mongodb+srv://bettinakronbk:uuTQkIjIhqHBF3Ms@bookfinder.dxfmw9w.mongodb.net/test
 
-### API-dokumentation
+### API-dokumentation:
 Projektet har en tillhörande API-dokumentation som bland annat beskriver API:t, dess fördelar, struktur och funktion.
 Dokumentationen är word-filen 'BookFinder API documentation' och finns bifogat i detta Github-repo.
 
@@ -32,10 +32,10 @@ Datat är organiserat i två Postman Collecctions:
 3. Bookfinder MS (Mock Servern). Länk till Environment/Mock server:
 Länk till Postman Collection: #### GLÖM EJ LÄNKA!!!
 
-### Testrapport
+### Testrapport:
 Bifogat detta Github-repo finns word-filen 'Testrapport Bettina Kron'
 
-### Testdata
+### Testdata:
 Mockad data från faker.js samt chatGPT
 
 ### Av Bettina Kron
