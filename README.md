@@ -16,7 +16,7 @@ books.js (som innehåller schema, modell och CRUD-routes)
 Kommandot som startar upp projektet är: npm run dev
 
 ### Databasen bookfinder med MongoDB-cloud som host:
-Projektet använder MongoDB Atlas, som är en molntjänst för MongoDB-databaser. Databasens namn är: 'bookfinder'
+Projektet använder MongoDB Atlas, som är en molntjänst för MongoDB-databaser. Databasens namn är: 'bookfinder'.\
 MongoDB Compass är grafiskt användargränssnitt (GUI) för att hantera MongoDB-databaser och måste vara installerat på din dator för att kunna arbeta med MongoDB-databaser. Kopplingen mellan applikationen och databasen mongoDB sker via min privata URI-länk:
 mongodb+srv://bettinakronbk:uuTQkIjIhqHBF3Ms@bookfinder.dxfmw9w.mongodb.net/test
 
