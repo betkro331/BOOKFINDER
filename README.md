@@ -27,10 +27,11 @@ Dokumentationen är word-filen 'BookFinder API documentation' och finns bifogat 
 ### Postman - collections, tester och mock server:
 Projektet har använt https://www.postman.com för att genomföra manuella och automatiska tester.
 All data är organiserad i två Postman Collecctions. I projektet finns också en Mockserver.
-1. BOOKFINDER med innehållande tester (manuella och automatiska). Länk till collection:
+1. BOOKFINDER med innehållande tester (manuella och automatiska). Länk till collection: 
+https://api.postman.com/collections/27013547-7915a4ad-9c7f-438c-9688-6ba2b9b304d4?access_key=PMAT-01GZ9E9XKZFQF7MZTR9VAZCYKE
 2. BOOKFINDER MOCKED (med tillhörande Mock Server). Länk till collection: 
-3. Bookfinder MS (Mock Servern). Länk till Environment/Mock server:
-Länk till Postman Collection: #### GLÖM EJ LÄNKA!!!
+https://api.postman.com/collections/27013547-6f05b7f6-74b7-41e2-be60-9f626a2d4f07?access_key=PMAT-01GZ9E7R5B156T452DRXEX3FQM
+3. Bookfinder MS (Mock Servern). Länk till Environment/Mock server: https://af86f981-ece6-4f9d-a26f-a62d3e0a537f.mock.pstmn.io
 
 ### Testrapport:
 Bifogat detta Github-repo finns word-filen 'Testrapport Bettina Kron'
